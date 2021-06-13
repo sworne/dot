@@ -1,0 +1,71 @@
+! special
+*.foreground:   #f7ece2
+*.background:   #2f343a
+*.cursorColor:  #1f1f1f
+
+! black
+*.color0:       #2f343a
+*.color8:       #2f343a
+
+! red
+*.color1:       #fa877f
+*.color9:       #fa877f
+
+! green
+*.color2:       #b6e6bd
+*.color10:      #b6e6bd
+
+! yellow
+*.color3:       #ffb677
+*.color11:      #ffb677
+
+! blue
+*.color4:       #f1c6e7
+*.color12:      #f1c6e7
+
+! magenta
+*.color5:       #745c97
+*.color13:      #745c97
+
+! cyan
+*.color6:       #9fdfcd
+*.color14:      #9fdfcd
+
+! white
+*.color7:       #f7ece2
+*.color15:      #f7ece2
+
+Xft.dpi: 146
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+URxvt.saveLines:        100000
+URxvt.xftAntialias:     true
+URxvt.font:             xft:inconsolata:size=12:antialias=true:hinting=true
+URxvt.boldFont:         xft:inconsolata:size=12:antialias=true:hinting=true
+URxvt.italicFont:       xft:inconsolata:size=12:antialias=true:hinting=true
+URxvt.bolditalicFont:   xft:inconsolata:size=12:antialias=true:hinting=true
+urxvt*scrollBar: false
+URxvt.internalBorder:40
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.url-launcher: google-chrome-beta
+URxvt.matcher.button: 1
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.letterSpace: -2
+urxvt*depth: 32
+urxvt*background:  #2f343a
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
