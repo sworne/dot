@@ -1,0 +1,9 @@
+location=top_right
+width=700
+hide_scroll=true
+insensitive=true
+key_down=Control_L-p
+prompt= 
+yoffset=20
+xoffset=-20
+stylesheet=style.css
