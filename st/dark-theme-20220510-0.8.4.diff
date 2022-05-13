@@ -1,0 +1,71 @@
+From 31dc7e074452a2229b96bbf041ec20ca9f98738c Mon Sep 17 00:00:00 2001
+From: Samuel Worne <samuel@worne.xyz>
+Date: Tue, 10 May 2022 09:50:32 +1000
+Subject: [PATCH] Custom color scheme for st.
+
+---
+ config.def.h | 41 ++++++++++++++++++++---------------------
+ 1 file changed, 20 insertions(+), 21 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 6f05dce..740cfaa 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -95,25 +95,24 @@ unsigned int tabspaces = 8;
+ 
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
+-	/* 8 normal colors */
+-	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
+-	"cyan3",
+-	"gray90",
+-
+-	/* 8 bright colors */
+-	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
+-	"cyan",
+-	"white",
++	/* Custom colors */
++	"#000f20",  /*  0: black    */
++	"#fa877f",  /*  1: red      */
++	"#fdd6b5",  /*  2: green    */
++	"#ffe1a8",  /*  3: yellow   */
++	"#B8D4E3",  /*  4: blue     */
++	"#D7C0D0",  /*  5: magenta  */
++	"#92B4A7",  /*  6: cyan     */
++	"#fdd6b5",  /*  7: white    */
++
++	"#294C60",  /*  8: brblack  */
++	"#ffbfa0",  /*  9: brred    */
++	"#CCAD8F",  /* 10: brgreen  */
++	"#EFC88B",  /* 11: bryellow */
++	"#647AA3",  /* 12: brblue   */
++	"#F1E4F3",  /* 13: brmagenta*/
++	"#E6FFC7",  /* 14: brcyan   */
++	"#E7D8C9",  /* 15: brwhite  */
+ 
+ 	[255] = 0,
+ 
+@@ -129,8 +128,8 @@ static const char *colorname[] = {
+  */
+ unsigned int defaultfg = 7;
+ unsigned int defaultbg = 0;
+-static unsigned int defaultcs = 256;
+-static unsigned int defaultrcs = 257;
++static unsigned int defaultcs = 7;
++static unsigned int defaultrcs = 15;
+ 
+ /*
+  * Default shape of cursor
+-- 
+2.33.3
+

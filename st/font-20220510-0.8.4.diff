@@ -1,0 +1,27 @@
+From 204dbd94a5c0c87c87ce89644f529e4ae803f5dd Mon Sep 17 00:00:00 2001
+From: Samuel Worne <samuel@worne.xyz>
+Date: Tue, 10 May 2022 10:10:21 +1000
+Subject: [PATCH] Custom font and border size.
+
+---
+ config.def.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 6f05dce..111bb60 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -5,8 +5,8 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+-static int borderpx = 2;
++static char *font = "monospace:pixelsize=22:antialias=true:autohint=true";
++static int borderpx = 40;
+ 
+ /*
+  * What program is execed by st depends of these precedence rules:
+-- 
+2.33.3
+
