@@ -1,13 +1,15 @@
 { config, pkgs, ... }: {
   imports = [
-    ./nix/zsh.nix
+    ./dwm/dwm.nix
+    ./nix/redshift.nix 
     ./nix/spotify.nix
     ./nix/vscode.nix 
-    ./nix/redshift.nix 
+    ./nix/zsh.nix
+    ./nix/fzf.nix
+    ./nix/lockscreen.nix
+    ./picom/picom.nix
     ./rofi/rofi.nix
     ./st/st.nix
-    ./dwm/dwm.nix
-    ./picom/picom.nix
     /etc/nixos/nix/secrets/secrets.nix
   ];
   

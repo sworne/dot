@@ -1,0 +1,42 @@
+# Actions
+super + o
+	firefox
+
+super + p
+	'st -t "runcmd" -c "runcmd" -e zsh -c "print -rl -- ${(ko)commands} | tail -n +2 | fzf --margin 5% | (xargs -I {}
+-r nohup {} >/dev/null 2>&1 &)"'
+
+super + slash
+	st -t "Keyboard Shortcuts" -c "Keyboard Shortcuts" -e glow -p ~/dot/dwm/keys.md
+
+super + shift + {r}
+	dwmc quit {1}
+
+super + v
+	dwmc togglebar
+
+# Windows
+super + q
+	dwmc killclient
+
+super + space
+	dwmc zoom
+
+super + shift + space
+	dwmc togglefloating
+
+super + {h,l}
+	dwmc setmfact {-,+}0.05
+
+super + {k,j}
+	dwmc focusstack {-,+}1
+
+super + {u,i}
+	dwmc movestack {-,+}1
+
+# Layouts & Montitors
+super + {b,n,m}
+	dwmc setlayoutex {0,1,2}
+
+super + {_,ctrl +}{_,shift +} {1-5}
+	dwmc {_,toggle}{viewex,tagex} {0-4}

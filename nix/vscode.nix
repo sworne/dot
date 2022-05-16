@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  home.packages = [ pkgs.nixpkgs-fmt pkgs.diffutils ];
+  home.packages = [ pkgs.nixpkgs-fmt pkgs.diffutils pkgs.gopls ];
   programs = {
     vscode = {
       enable = true;
