@@ -3,10 +3,6 @@ with import <nixpkgs> { };
 (dwm.overrideAttrs (oldAttrs: rec {
   buildInputs = oldAttrs.buildInputs ++ [ ];
   patches = [
-    # (fetchpatch {
-    #   url = "https://dwm.suckless.org/patches/barpadding/dwm-barpadding-6.2.diff";
-    #   sha256 = "sha256-843ifurg6TZDyu60dwxckIQWx4rtQl8wwDzqMxTIJmM=";
-    # })
     (fetchpatch {
       url = "https://dwm.suckless.org/patches/alwayscenter/dwm-alwayscenter-20200625-f04cac6.diff";
       sha256 = "sha256-xQEwrNphaLOkhX3ER09sRPB3EEvxC73oNWMVkqo4iSY=";
@@ -18,6 +14,10 @@ with import <nixpkgs> { };
     (fetchpatch {
       url = "https://dwm.suckless.org/patches/steam/dwm-steam-6.2.diff";
       sha256 = "sha256-f3lffBjz7+0Khyn9c9orzReoLTqBb/9gVGshYARGdVc=";
+    })
+    (fetchpatch {
+      url = "https://dwm.suckless.org/patches/bar_height/dwm-bar-height-6.2.diff";
+      sha256 = "sha256-GZPOv8ETG3dcGk6nOItF0aPFlKs1Lyk6Y1sPjFQAyNc=";
     })
     (fetchpatch {
       url = "https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff";
@@ -43,8 +43,11 @@ with import <nixpkgs> { };
       url = "https://dwm.suckless.org/patches/dwmc/dwm-dwmc-6.2.diff";
       sha256 = "sha256-tHUQeHxxww87iW/dSzcgzFi4afPd67a8Wm8xtSO7vHE=";
     })
-    # ./keys-20220510-6.2.diff
-    # ./appearance-20220510-6.2.diff
-    # ./dark-theme-20220510-6.2.diff
+    ./keys-20220517-6.2.diff
+    ./appearance-20220517-6.2.diff
+    ./dark-theme-20220517-6.2.diff
+    ./cyclelayout-dwmc-20220517-6.2.diff
+    ./rules-20220517-6.2.diff
   ];
+  postPatch = "chmod +x dwmc";
 }))

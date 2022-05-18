@@ -5,7 +5,7 @@
     ./nix/spotify.nix
     ./nix/vscode.nix 
     ./nix/zsh.nix
-    ./nix/fzf.nix
+    ./fzf/fzf.nix
     ./nix/lockscreen.nix
     ./picom/picom.nix
     ./rofi/rofi.nix

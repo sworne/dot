@@ -1,0 +1,24 @@
+diff --git a/config.def.h b/config.h
+index 5ce13c9..b808983 100644
+--- a/config.def.h
++++ b/config.h
+@@ -5,8 +5,8 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+-static int borderpx = 2;
++static char *font = "JetBrains Mono:style=Regular:pixelsize=22:antialias=true:autohint=true";
++static int borderpx = 40;
+ 
+ /*
+  * What program is execed by st depends of these precedence rules:
+@@ -74,7 +74,7 @@ static unsigned int cursorthickness = 2;
+ static int bellvolume = 0;
+ 
+ /* default TERM value */
+-char *termname = "st-256color";
++char *termname = "st";
+ 
+ /*
+  * spaces per tab

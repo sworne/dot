@@ -1,10 +1,10 @@
 diff --git a/config.def.h b/config.def.h
-index 1614e73..355e35a 100644
+index 14f4732..60a15f1 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -8,18 +8,17 @@ static const int topbar             = 1;        /* 0 means bottom bar */
- static const char *fonts[]          = { "JetBrainsMono Nerd Font:style:medium:size=10",
- 										"Material Design Icons-Regular:size=10" };
+@@ -9,15 +9,15 @@ static const int user_bh            = 32;        /* 0 means that dwm will calcul
+ static const char *fonts[]          = { "JetBrains Mono:style:medium:size=10",
+ 										"Material Icons:size=14" };
  static const char dmenufont[]       = "monospace:size=10";
 -static const char col_gray1[]       = "#222222";
 -static const char col_gray2[]       = "#444444";
@@ -25,7 +25,4 @@ index 1614e73..355e35a 100644
 +	[SchemeSel]  = { color_yellow, color_navy,  color_yellow },
  };
  
--
  /* tagging */
- static const char *tags[] = { "", "", "", "", "" };
- 

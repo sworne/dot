@@ -3,11 +3,10 @@ super + o
 	firefox
 
 super + p
-	'st -t "runcmd" -c "runcmd" -e zsh -c "print -rl -- ${(ko)commands} | tail -n +2 | fzf --margin 5% | (xargs -I {}
--r nohup {} >/dev/null 2>&1 &)"'
+	st -g 45 -c Runcmd -t Run -e run
 
 super + slash
-	st -t "Keyboard Shortcuts" -c "Keyboard Shortcuts" -e glow -p ~/dot/dwm/keys.md
+	st -t "Shortcuts" -c "Shortcuts" -g 114 -e glow -p ~/dot/dwm/keys.md
 
 super + shift + {r}
 	dwmc quit {1}
@@ -37,6 +36,9 @@ super + {u,i}
 # Layouts & Montitors
 super + {b,n,m}
 	dwmc setlayoutex {0,1,2}
+
+super + {bracketleft,bracketright}
+	dwmc cyclelayouts {-,+}1
 
 super + {_,ctrl +}{_,shift +} {1-5}
 	dwmc {_,toggle}{viewex,tagex} {0-4}

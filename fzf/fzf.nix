@@ -1,4 +1,9 @@
-{ config, ... }: {
+{ config, pkgs, ... }: 
+let
+  runcmd = pkgs.writeScriptBin "run" (builtins.readFile ./run.sh);
+
+in {
+  home.packages = [ runcmd ];
   programs = {
     fzf = {
       enable = true;
@@ -7,7 +12,7 @@
         "--border top"
         "--pointer -"
         "--no-info"
-        "--header ' '"
+        # "--header ' '"
         ''
           --color='fg:white,bg:black,preview-fg:white,preview-bg:black' \
           --color='hl:yellow,fg+:white,bg+:black,gutter:black,hl+:yellow' \
@@ -18,10 +23,6 @@
     zsh = {
       enable = true;
       shellAliases = {
-        run = 
-          ''
-            print -rl -- ''${(ko)commands} | tail -n +2 | fzf --margin 5% | (xargs -I {} -r nohup {} >/dev/null 2>&1 &)
-          '';
         cfg =
           ''
             find ~/dot /etc/nixos -type f -not -path '*/\.git/*' -print | 

@@ -1,0 +1,10 @@
+diff --git a/config.def.h b/config.def.h
+index bece089..d3df6f2 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -162,4 +162,5 @@ static Signal signals[] = {
+ 	{ "quit",           quit },
+ 	{ "setlayout",      setlayout },
+ 	{ "setlayoutex",    setlayoutex },
++	{ "cyclelayout",    cyclelayout },
+ };
