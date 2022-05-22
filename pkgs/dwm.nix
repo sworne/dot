@@ -4,22 +4,25 @@
     dwm-status = {
       enable = true;
       order = [ "time" ];
-      };
+    };
     sxhkd = {
       enable = true;
-      extraConfig = builtins.readFile ../sxhkd/dwm;
+      extraConfig = builtins.readFile ../dotfiles/sxhkd/dwm;
     };
   };
   home.file.dwm-keys = {
-    source = ./keys.md;
+    source = ../dotfiles/dwm/keys.md;
     target = ".dwm-keys.md";
   };
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-    pkgs.jetbrains-mono #dwm main font
-    pkgs.material-icons #dwm icon font
-    pkgs.fluxbox #for fbsetroot
-    pkgs.glow #dwm keyboard shortuct help
-    (import ./base.nix)
+    fluxbox #for fbsetroot
+    glow #dwm keyboard shortuct help
+    jetbrains-mono #dwm main font
+    material-icons #dwm icon font
+    scrot
+    xfce.thunar
+    pavucontrol
+    (import ../dotfiles/dwm/defualt.nix)
   ];
 }

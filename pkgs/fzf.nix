@@ -1,6 +1,6 @@
 { config, pkgs, ... }: 
 let
-  runcmd = pkgs.writeScriptBin "run" (builtins.readFile ./run.sh);
+  runcmd = pkgs.writeScriptBin "run" (builtins.readFile ../dotfiles/fzf/run.sh);
 
 in {
   home.packages = [ runcmd ];

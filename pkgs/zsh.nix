@@ -1,4 +1,5 @@
 { config, pkgs, ... }: {
+  home.packages = with pkgs; [ tmux ];
   programs = {
     bat = {
       enable = true;

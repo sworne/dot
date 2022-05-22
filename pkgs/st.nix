@@ -1,5 +1,5 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    (import ./base.nix)
+    (import ../dotfiles/st/default.nix)
   ];
 }
