@@ -10,6 +10,7 @@
     ../pkgs/vscode.nix
     ../pkgs/xsecurelock.nix
     ../pkgs/zsh.nix
+    ../pkgs/spotify.nix
     #../pkgs/redshift.nix    # Blue light filter
   ];
 }

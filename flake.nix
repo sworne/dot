@@ -10,10 +10,8 @@
 
   outputs = { home-manager, ... }:
     {
-      nixosModules = {
         dwm = import ./roles/dwm.nix;
         tty = import ./roles/tty.nix;
-      };
     };
 }
 
