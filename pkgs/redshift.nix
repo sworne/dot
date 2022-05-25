@@ -1,7 +1,7 @@
-{ config, ... }: {
+{ config, secrets, ... }: {
     services.redshift = {
         enable = true;
-        longitude = config.location.longitude;
-        latitude = config.location.latitude;
+        latitude = import "${secrets.outPath}/home/latitude";
+        longitude = import "${secrets.outPath}/home/longitude";
     };
 }
