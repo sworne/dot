@@ -1,12 +1,17 @@
-{ pkgs, ... }: {
-  programs.zsh.profileExtra = "fbsetroot  -fg '#001633' -bg '#000f20' -mod 100 100";
+{ pkgs, utils, theme, ... }:
+let
+  customDwm = import ../dotfiles/dwm/default.nix;
+  patch = utils.mustache "theme-6.2.diff" ../dotfiles/dwm/theme-6.2.diff.mustache theme;
+in
+{
+  imports = [ ./bg.nix ./sxhkd.nix ];
+
   services = {
     dwm-status = {
       enable = true;
       order = [ "time" ];
     };
     sxhkd = {
-      enable = true;
       extraConfig = builtins.readFile ../dotfiles/sxhkd/dwm;
     };
   };
@@ -16,13 +21,12 @@
   };
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-    fluxbox #for fbsetroot
+    (customDwm.overrideAttrs (oldAttrs: rec { patches = oldAttrs.patches ++ [ patch ]; }))
     glow #dwm keyboard shortuct help
     jetbrains-mono #dwm main font
     material-icons #dwm icon font
+    pavucontrol
     scrot
     xfce.thunar
-    pavucontrol
-    (import ../dotfiles/dwm/defualt.nix)
   ];
 }

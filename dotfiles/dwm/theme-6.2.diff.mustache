@@ -1,0 +1,28 @@
+diff --git a/config.def.h b/config.def.h
+index 14f4732..60a15f1 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -9,15 +9,15 @@ static const int user_bh            = 32;        /* 0 means that dwm will calcul
+ static const char *fonts[]          = { "JetBrains Mono:style:medium:size=10",
+ 										"Material Icons:size=14" };
+ static const char dmenufont[]       = "monospace:size=10";
+-static const char col_gray1[]       = "#222222";
+-static const char col_gray2[]       = "#444444";
+-static const char col_gray3[]       = "#bbbbbb";
+-static const char col_gray4[]       = "#eeeeee";
+-static const char col_cyan[]        = "#005577";
++static const char color_1[]         = "{{{black}}}";
++static const char color_2[]         = "{{{brightBlack}}}";
++static const char color_3[]         = "{{{white}}}";
++static const char color_4[]         = "{{{brightWhite}}}";
++static const char color_5[]         = "{{{red}}}";
+ static const char *colors[][3]      = {
+-	/*               fg         bg         border   */
+-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
++	/*               fg         bg        border   */
++	[SchemeNorm] = { color_4,   color_1,  color_1 },
++	[SchemeSel]  = { color_3,   color_1,  color_3 },
+ };
+ 
+ /* tagging */

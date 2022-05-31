@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  home.packages = [
+  home.packages = with pkgs; [
     networkmanager-openvpn
     networkmanagerapplet
     openvpn

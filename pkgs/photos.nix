@@ -1,3 +1,3 @@
 { config, pkgs, ... }: {
-  home.packages = [ darktable ];
+  home.packages = with pkgs; [ darktable ];
 }

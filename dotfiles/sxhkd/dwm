@@ -6,7 +6,7 @@ super + p
 	st -g 45 -c Runcmd -t Run -e run
 
 super + slash
-	st -t "Shortcuts" -c "Shortcuts" -g 114 -e glow -p ~/dot/dwm/keys.md
+	st -t "Shortcuts" -c "Shortcuts" -g 114 -e glow -p ~/.dwm-keys.md
 
 super + shift + {r}
 	dwmc quit {1}

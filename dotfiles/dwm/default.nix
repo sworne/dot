@@ -1,5 +1,4 @@
 with import <nixpkgs> { };
-
 (dwm.overrideAttrs (oldAttrs: rec {
   buildInputs = oldAttrs.buildInputs ++ [ ];
   patches = [
@@ -45,7 +44,6 @@ with import <nixpkgs> { };
     })
     ./keys-20220517-6.2.diff
     ./appearance-20220517-6.2.diff
-    ./dark-theme-20220517-6.2.diff
     ./cyclelayout-dwmc-20220517-6.2.diff
     ./rules-20220517-6.2.diff
   ];

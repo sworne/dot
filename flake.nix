@@ -13,11 +13,36 @@
     };
   };
 
-  outputs = { home-manager, ... }@attrs:
+  outputs = { home-manager, secrets, ... }@attrs:
+    let
+      system = "x86_64-linux";
+      username = "sworne";
+      home = "/home/sworne";
+    in
     {
-      dwm = import ./roles/dwm.nix;
-      tty = import ./roles/tty.nix;
+      homeConfigurations.non-nix = home-manager.lib.homeManagerConfiguration {
+        inherit system username;
+        configuration = import ./roles/dwm.nix;
+        stateVersion = "21.11";
+        homeDirectory = home;
+        extraSpecialArgs = attrs;
+      };
+
+      roles = builtins.listToAttrs (map
+        (name: {
+          name = (builtins.replaceStrings [ ".nix" ] [ "" ] name);
+          value = import (./roles + "/${name}");
+        })
+        (builtins.attrNames (builtins.readDir ./roles)));
+
+      pkgs = builtins.listToAttrs (map
+        (name: {
+          name = (builtins.replaceStrings [ ".nix" ] [ "" ] name);
+          value = import (./pkgs + "/${name}");
+        })
+        (builtins.attrNames (builtins.readDir ./pkgs)));
     };
 }
+
 
 

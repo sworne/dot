@@ -18,7 +18,6 @@ with import <nixpkgs> { };
       url = "https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20220127-2c5edf2.diff";
       sha256 = "sha256-8oVLgbsYCfMhNEOGadb5DFajdDKPxwgf3P/4vOXfUFo=";
     })
-    ./dark-theme-20220510-0.8.4.diff
     ./appearance-20220517-0.8.4.diff
   ];
 }))
