@@ -22,8 +22,8 @@
       brightCyan = "#E6FFC7";
       brightWhite = "#E7D8C9";
     };
-  green = {
-      name = "green";
+    forest = {
+      name = "forest";
       type = "light";
 
       black = "#EDF2F4";
@@ -31,7 +31,7 @@
       green = "#739E82";
       yellow = "#ffe1a8";
       blue = "#B28B84";
-      magenta = "#717568" ;
+      magenta = "#717568";
       cyan = "#92B4A7";
       white = "#034732";
 
