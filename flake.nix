@@ -17,7 +17,7 @@
     let
       system = "x86_64-linux";
       username = "sworne";
-      home = "/home/sworne";
+      home = "${secrets.outPath}/homedir";
     in
     {
       homeConfigurations.non-nix = home-manager.lib.homeManagerConfiguration {
