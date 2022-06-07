@@ -8,7 +8,7 @@
     Install.WantedBy = [ "graphical-session.target" ];
     Service = {
       Type = "simple";
-      ExecStart = ''${pkgs.sxhkd}/bin/sxhkd'';
+      ExecStart = ''${pkgs.zsh}/bin/zsh -c ${pkgs.sxhkd}/bin/sxhkd'';
       ExecStop = "pkill sxhkd";
     };
   };
