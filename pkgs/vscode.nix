@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  home.packages = [ pkgs.nixpkgs-fmt pkgs.diffutils pkgs.gopls ];
+  home.packages = [ pkgs.nixpkgs-fmt pkgs.diffutils pkgs.gopls pkgs.black ];
   programs = {
     vscode = {
       enable = true;
@@ -15,6 +15,7 @@
         naumovs.color-highlight
         tobiasalthoff.atom-material-theme
         viktorqvarfordt.vscode-pitch-black-theme
+        vscode-extensions.ms-python.python
         yzhang.markdown-all-in-one
         zhuangtongfa.material-theme
       ];
