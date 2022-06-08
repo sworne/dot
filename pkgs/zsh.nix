@@ -29,7 +29,7 @@
       enableSyntaxHighlighting = false;
       prezto = {
         enable = true;
-        programs.zsh.oh-my-zsh.extraConfig = ''
+        extraConfig = ''
           zstyle ':completion:*' users
         '';
         prompt.theme = "walters";
