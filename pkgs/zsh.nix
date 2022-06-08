@@ -11,7 +11,6 @@
     };
     zsh = {
       enable = true;
-      programs.zsh.enableSyntaxHighlighting = true;
       shellAliases = {
         ls = "ls -1hs --group-directories-first --file-type --color=alway";
         meh = "feh --scale-down --auto-zoom";
