@@ -11,6 +11,7 @@
     };
     zsh = {
       enable = true;
+      programs.zsh.enableSyntaxHighlighting = true;
       shellAliases = {
         ls = "ls -1hs --group-directories-first --file-type --color=alway";
         meh = "feh --scale-down --auto-zoom";
@@ -24,12 +25,14 @@
         vid = "$HOME/Videos";
         dl = "$HOME/Downloads";
       };
-      history = {
-        size = 100000;
-      };
+      history.size = 100000;
+      initExtra = "if [ -f ~/.zshwork ]; then . ~/.zshwork; fi";
       enableSyntaxHighlighting = false;
       prezto = {
         enable = true;
+        programs.zsh.oh-my-zsh.extraConfig = ''
+          zstyle ':completion:*' users
+        '';
         prompt.theme = "walters";
       };
     };
