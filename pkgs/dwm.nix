@@ -4,7 +4,7 @@ let
   patch = utils.mustache "theme-6.2.diff" ../dotfiles/dwm/theme-6.2.diff.mustache theme;
 in
 {
-  imports = [ ./bg.nix ./sxhkd.nix ];
+  imports = [ ./wallpaper.nix ./sxhkd.nix ];
 
   services = {
     dwm-status = {
@@ -25,8 +25,5 @@ in
     glow #dwm keyboard shortuct help
     jetbrains-mono #dwm main font
     material-icons #dwm icon font
-    pavucontrol
-    scrot
-    xfce.thunar
   ];
 }

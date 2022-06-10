@@ -7,7 +7,7 @@
     Install.WantedBy = [ "graphical-session.target" ];
     Service = {
       Type = "oneshot";
-      ExecStart = ''${pkgs.fluxbox}/bin/fbsetroot -gradient Crossdiagonal -from "${theme.black}" -to "${theme.brightBlue}"'';
+      ExecStart = ''${pkgs.fluxbox}/bin/fbsetroot -gradient Vertical -from "${theme.black}" -to "${theme.brightBlue}"'';
     };
   };
 }

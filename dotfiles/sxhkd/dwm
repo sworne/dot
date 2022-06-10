@@ -1,12 +1,14 @@
 # Actions
 super + o
-	firefox
+	sensible-browser
 
 super + p
-	st -g 45 -c Runcmd -t Run -e run
+	x-terminal-emulator -t Run -e run
+	#st -g 45 -c Runcmd -t Run -e run
 
 super + slash
-	st -t "Shortcuts" -c "Shortcuts" -g 114 -e glow -p ~/.dwm-keys.md
+	x-terminal-emulator -t Shortcuts -e glow -p ~/.dwm-keys.md
+	#st -t "Shortcuts" -c "Shortcuts" -g 114 -e glow -p ~/.dwm-keys.md
 
 super + shift + {r}
 	dwmc quit {1}

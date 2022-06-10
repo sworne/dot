@@ -1,0 +1,61 @@
+diff --git a/config.def.h b/config.def.h
+index 91ab8ca..6c8e3cb 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -96,24 +96,23 @@ unsigned int tabspaces = 8;
+ /* Terminal colors (16 first used in escape sequence) */
+ static const char *colorname[] = {
+ 	/* 8 normal colors */
+-	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
+-	"cyan3",
+-	"gray90",
+-
+-	/* 8 bright colors */
+-	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
+-	"cyan",
+-	"white",
++	"{{{black}}}",  /*  0: black    */
++	"{{{red}}}",  /*  1: red      */
++	"{{{green}}}",  /*  2: green    */
++	"{{{yellow}}}",  /*  3: yellow   */
++	"{{{blue}}}",  /*  4: blue     */
++	"{{{magenta}}}",  /*  5: magenta  */
++	"{{{cyan}}}",  /*  6: cyan     */
++	"{{{white}}}",  /*  7: white    */
++
++	"{{{brightBlack}}}",  /*  8: brblack  */
++	"{{{brightRed}}}",  /*  9: brred    */
++	"{{{brightGreen}}}",  /* 10: brgreen  */
++	"{{{brightYellow}}}",  /* 11: bryellow */
++	"{{{brightBlue}}}",  /* 12: brblue   */
++	"{{{brightMagenta}}}",  /* 13: brmagenta*/
++	"{{{brightCyan}}}",  /* 14: brcyan   */
++	"{{{brightWhite}}}",  /* 15: brwhite  */
+ 
+ 	[255] = 0,
+ 
+@@ -129,10 +128,10 @@ static const char *colorname[] = {
+  * Default colors (colorname index)
+  * foreground, background, cursor, reverse cursor
+  */
+-unsigned int defaultfg = 258;
+-unsigned int defaultbg = 259;
+-unsigned int defaultcs = 256;
+-static unsigned int defaultrcs = 257;
++unsigned int defaultfg = 7;
++unsigned int defaultbg = 0;
++unsigned int defaultcs = 7;
++static unsigned int defaultrcs = 15;
+ 
+ /*
+  * Default shape of cursor

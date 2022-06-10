@@ -17,17 +17,9 @@
     let
       system = "x86_64-linux";
       username = "sworne";
-      home = "${secrets.outPath}/homedir";
+      home = builtins.readFile "${secrets.outPath}/homedir";
     in
     {
-      homeConfigurations.non-nix = home-manager.lib.homeManagerConfiguration {
-        inherit system username;
-        configuration = import ./roles/dwm.nix;
-        stateVersion = "21.11";
-        homeDirectory = home;
-        extraSpecialArgs = attrs;
-      };
-
       roles = builtins.listToAttrs (map
         (name: {
           name = (builtins.replaceStrings [ ".nix" ] [ "" ] name);
@@ -41,6 +33,15 @@
           value = import (./pkgs + "/${name}");
         })
         (builtins.attrNames (builtins.readDir ./pkgs)));
+
+
+      homeConfigurations.non-nix = home-manager.lib.homeManagerConfiguration {
+        inherit system username;
+        configuration = import ./roles/dwm.nix;
+        stateVersion = "21.11";
+        homeDirectory = home;
+        extraSpecialArgs = attrs;
+      };
     };
 }
 

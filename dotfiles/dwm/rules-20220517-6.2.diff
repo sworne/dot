@@ -8,8 +8,8 @@ index d3df6f2..a7ca4df 100644
  	/* class      instance    title       tags mask     isfloating   monitor */
 -	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 -	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-+	{ "Shortcuts",NULL,       NULL,       1 << 8,       1,           -1 },
-+	{ "Runcmd",   NULL,       NULL,       1 << 8,       1,           -1 },
++	{ NULL,       NULL,      "Shortcuts", 1 << 8,       1,           -1 },
++	{ NULL,       NULL,      "Run",       1 << 8,       1,           -1 },
 +	{ "Spotify",  NULL,       NULL,       3,            0,           -1 },
 +	{ "Gmail",    NULL,       NULL,       2,            0,           -1 },
 +	{ "Chat",     NULL,       NULL,       2,            0,           -1 },

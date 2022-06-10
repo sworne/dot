@@ -39,7 +39,7 @@
       brightRed = "#ffbfa0";
       brightGreen = "#C8D5B9";
       brightYellow = "#EFC88B";
-      brightBlue = "#F39B6D";
+      brightBlue = "#7BA098";
       brightMagenta = "#E6AA68";
       brightCyan = "#CDE5D7";
       brightWhite = "#19381F";
