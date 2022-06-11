@@ -16,7 +16,7 @@ in
       order = [ "time" ];
     };
     sxhkd = {
-      extraConfig = sxhkd;
+      extraConfig = builtins.readFile sxhkd;
     };
   };
   home.file.dwm-keys = {
