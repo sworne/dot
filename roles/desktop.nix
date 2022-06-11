@@ -1,7 +1,6 @@
 { ... }: {
   imports = [
     ./dwm.nix
-    ../pkgs/st.nix
     ../pkgs/xsecurelock.nix
     ../pkgs/vpn.nix
     ../pkgs/spotify.nix
