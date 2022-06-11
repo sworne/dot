@@ -42,7 +42,7 @@ with import <nixpkgs> { };
       url = "https://dwm.suckless.org/patches/dwmc/dwm-dwmc-6.2.diff";
       sha256 = "sha256-tHUQeHxxww87iW/dSzcgzFi4afPd67a8Wm8xtSO7vHE=";
     })
-    ./keys-20220517-6.2.diff
+    ./keys-20220611-6.2.diff
     ./appearance-20220517-6.2.diff
     ./cyclelayout-dwmc-20220517-6.2.diff
     ./rules-20220517-6.2.diff
