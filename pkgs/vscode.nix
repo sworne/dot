@@ -11,11 +11,11 @@
         golang.go
         haskell.haskell
         jnoortheen.nix-ide
+        ms-python.python
         naumovs.color-highlight
         naumovs.color-highlight
         tobiasalthoff.atom-material-theme
         viktorqvarfordt.vscode-pitch-black-theme
-        vscode-extensions.ms-python.python
         yzhang.markdown-all-in-one
         zhuangtongfa.material-theme
       ];
