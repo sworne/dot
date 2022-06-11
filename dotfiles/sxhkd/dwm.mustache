@@ -1,0 +1,44 @@
+# Actions
+super + o
+	{{{browser}}}
+
+super + p
+	{{{term}}} -t Run -e run
+
+super + slash
+	{{{term}}} -t Shortcuts -e glow -p ~/.dwm-keys.md
+
+super + shift + {r}
+	dwmc quit {1}
+
+super + v
+	dwmc togglebar
+
+# Windows
+super + q
+	dwmc killclient
+
+super + space
+	dwmc zoom
+
+super + shift + space
+	dwmc togglefloating
+
+super + {h,l}
+	dwmc setmfact {-,+}0.05
+
+super + {k,j}
+	dwmc focusstack {-,+}1
+
+super + {u,i}
+	dwmc movestack {-,+}1
+
+# Layouts & Montitors
+super + {b,n,m}
+	dwmc setlayoutex {0,1,2}
+
+super + {bracketleft,bracketright}
+	dwmc cyclelayouts {-,+}1
+
+super + {_,ctrl +}{_,shift +} {1-5}
+	dwmc {_,toggle}{viewex,tagex} {0-4}

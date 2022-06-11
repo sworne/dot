@@ -2,6 +2,10 @@
 let
   customDwm = import ../dotfiles/dwm/default.nix;
   patch = utils.mustache "theme-6.2.diff" ../dotfiles/dwm/theme-6.2.diff.mustache theme;
+  sxhkd = utils.mustache "dwm-sxhkd" ../dotfiles/sxhkd/dwm.mustache {
+     term = "alacritty";
+     browser = "firefox";
+     };
 in
 {
   imports = [ ./wallpaper.nix ./sxhkd.nix ];

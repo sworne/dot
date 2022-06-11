@@ -7,7 +7,7 @@
     libpng
     libuv
     libvorbis
-    lutris
+    #lutris
     mbedtls
     minecraft
     openal
