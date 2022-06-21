@@ -1,7 +1,7 @@
 {
   description = "sworne@ hm config";
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-22.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,7 +38,6 @@
       homeConfigurations.non-nix = home-manager.lib.homeManagerConfiguration {
         inherit system username;
         configuration = import ./roles/dwm.nix;
-        stateVersion = "21.11";
         homeDirectory = home;
         extraSpecialArgs = attrs;
       };
