@@ -42,6 +42,14 @@
         homeDirectory = home;
         extraSpecialArgs = attrs;
       };
+
+      homeConfigurations.non-nix-shell = home-manager.lib.homeManagerConfiguration {
+          inherit system username;
+          configuration = import ./roles/shell.nix;
+          stateVersion = "22.05";
+          homeDirectory = home;
+          extraSpecialArgs = attrs;
+        };
     };
 }
 
