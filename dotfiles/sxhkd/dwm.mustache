@@ -1,9 +1,9 @@
 # Actions
 super + o
-	{{{browser}}}
+	nohup {{{browser}}} >/dev/null 2>&1 &
 
 super + p
-	{{{term}}} -t Run -e run
+	nohup {{{term}}} -t Run -e run >/dev/null 2>&1 &
 
 super + slash
 	{{{term}}} -t Shortcuts -e glow -p ~/.dwm-keys.md
