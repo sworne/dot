@@ -7,7 +7,7 @@
     libpng
     libuv
     libvorbis
-    #lutris
+    lutris
     mbedtls
     minecraft
     openal
@@ -17,6 +17,5 @@
     steam-run
     wine
     winetricks
-    wineWowPackages.full
    ];
 }
