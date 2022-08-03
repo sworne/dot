@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ../pkgs/default.nix
+    ../pkgs/games.nix
     ../pkgs/gtk.nix
     ../pkgs/media.nix
     ../pkgs/photos.nix
