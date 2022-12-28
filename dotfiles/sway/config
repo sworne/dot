@@ -1,0 +1,35 @@
+set $mod Mod4
+
+#output * bg /var/tmp/bg fill
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+
+bar {
+    position top
+    tray_output primary
+    tray_padding 20
+    font JetBrains Mono:style:medium:size=10
+    status_command while ~/.config/sway/bar.sh; do sleep 5; done
+    status_edge_padding 20
+    status_padding 5
+}
+
+#laptop
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+#Monitor
+output DP-3 scale 1.1
+
+
+include @sysconfdir@/sway/config.d/*

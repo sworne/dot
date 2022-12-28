@@ -37,7 +37,7 @@
 
       homeConfigurations.non-nix = home-manager.lib.homeManagerConfiguration {
         inherit system username;
-        configuration = import ./roles/dwm.nix;
+        configuration = import ./roles/sway.nix;
         homeDirectory = home;
         extraSpecialArgs = attrs;
       };

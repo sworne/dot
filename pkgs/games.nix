@@ -13,8 +13,6 @@
     openal
     playonlinux
     SDL2
-    steam
-    steam-run
     wine
     winetricks
    ];

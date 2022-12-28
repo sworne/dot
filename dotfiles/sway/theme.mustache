@@ -1,0 +1,28 @@
+set $primary {{{black}}} 
+set $secondary {{{brightBlack}}}
+set $tertiary {{{white}}}
+set $quaternary {{{brightWhite}}}
+set $urgent {{{red}}}
+
+bar.colors {
+    statusline $tertiary
+    background $primary
+    focused_workspace $primary $tertiary $primary
+    inactive_workspace $primary $primary $quaternary
+    active_workspace $primary $primary $tertiary
+}
+
+client.focused          $tertiary $tertiary $primary $tertiary $tertiary
+client.focused_inactive $primary $primary $tertiary $primary $primary
+client.unfocused        $primary $primary $tertiary $primary $primary
+client.urgent           $quaternary $urgent $primary $urgent $urgent
+client.placeholder      $primary $primary $tertiary $primary $primary
+client.background       $tertiary 
+
+default_border pixel 6
+default_floating_border pixel 6
+hide_edge_borders smart
+focus_follows_mouse yes
+gaps inner 10
+gaps outer 10
+smart_gaps off

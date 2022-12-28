@@ -1,0 +1,56 @@
+set $left h
+set $down j
+set $up k
+set $right l
+floating_modifier $mod normal
+
+bindsym $mod+Return exec $term
+bindsym $mod+o exec $web
+bindsym $mod+p exec $menu
+
+bindsym $mod+q kill
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+q exec swaynag -t normal -m 'Exit session?' -b 'Yes' 'swaymsg exit'
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+u splith
+bindsym $mod+i splitv
+
+
+bindsym $mod+b layout stacking
+bindsym $mod+n layout tabbed
+bindsym $mod+m fullscreen
+bindsym $mod+v layout toggle split
+
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+Alt+Space sticky toggle
+# Swap focus between the tiling area and the floating area
+#bindsym $mod+space focus mode_toggle
+
+bindsym $mod+a focus parent
+
+bindsym $mod+r mode "resize"
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}

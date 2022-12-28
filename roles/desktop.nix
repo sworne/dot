@@ -9,6 +9,6 @@
     ../pkgs/vpn.nix
     ../pkgs/vscode.nix
     ../pkgs/xsecurelock.nix
-    ./dwm.nix
+    ./sway.nix
   ];
 }
