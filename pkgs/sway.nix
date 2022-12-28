@@ -1,8 +1,7 @@
 { pkgs, utils, theme, ... }:
 let
-  keys = (builtins.readFile ../dotfiles/sway/keys);
-  theme = utils.mustache "theme" ../dotfiles/sway/theme.mustache theme;
-  apps = utils.mustache "apps" ../dotfiles/sway/apps.mustache {
+  sway-theme = utils.mustache "sway-theme" ../dotfiles/sway/theme.mustache theme;
+  sway-apps = utils.mustache "sway-apps" ../dotfiles/sway/apps.mustache {
     term = "alacritty";
     browser = "firefox";
   };
@@ -11,8 +10,8 @@ in
   xdg.configFile =
     {
       "sway/keys".source = ../dotfiles/sway/keys;
-      "sway/theme".source = theme;
-      "sway/apps".source = apps;
+      "sway/theme".source = sway-theme;
+      "sway/apps".source = sway-apps;
     };
   wayland.windowManager.sway = {
     enable = true;
