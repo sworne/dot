@@ -10,7 +10,6 @@ in
 {
   xdg.configFile =
     {
-      "sway/config".source = ../dotfiles/sway/config;
       "sway/keys".source = ../dotfiles/sway/keys;
       "sway/theme".source = theme;
       "sway/apps".source = apps;
