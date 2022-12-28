@@ -22,6 +22,6 @@ in
       include theme
       include apps
     '';
-    extraConfig = (builtins.readFile xdg.configFile."sway/config".target);
+    extraConfig = (builtins.readFile ../dotfiles/sway/config);
   };
 }
