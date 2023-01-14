@@ -3,6 +3,7 @@
     bitwarden
     bitwarden-cli
     firefox-wayland
+    google-chrome
     imagemagick
     irssi
     libnotify
