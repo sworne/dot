@@ -8,11 +8,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1673343300,
-        "narHash": "sha256-5Xdj6kpXYMie0MlnGwqK5FaMdsedxvyuakWtyKB3zaQ=",
+        "lastModified": 1677533532,
+        "narHash": "sha256-2Ie47MONhIFOxvbLmwhmCCe/IoVDVd7YnoK61vu5Xy8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "176e455371a8371586e8a3ff0d56ee9f3ca2324e",
+        "rev": "305daba44a9df57738cffc67c08129005a25579a",
         "type": "github"
       },
       "original": {
@@ -46,11 +46,11 @@
     "secrets": {
       "flake": false,
       "locked": {
-        "lastModified": 1655775104,
-        "narHash": "sha256-I2GZN1iOcsa3SpJqft8P38Zaw1aArUM1QxsnfdeOmwE=",
+        "lastModified": 1674787586,
+        "narHash": "sha256-huFEMMhVAnkJovG47yPD+G88Y9vm6kUatZqR1BOKCBo=",
         "ref": "main",
-        "rev": "d10522f4b25b6802222aa6377a6d13a22e8c6edd",
-        "revCount": 22,
+        "rev": "9f92f5bf4fdc56b46f15cb204fa91cd2a6818784",
+        "revCount": 26,
         "type": "git",
         "url": "ssh://git@github.com/sworne/sec.git"
       },

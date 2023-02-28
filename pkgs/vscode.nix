@@ -9,9 +9,9 @@
         dbaeumer.vscode-eslint
         dracula-theme.theme-dracula
         golang.go
+        arrterian.nix-env-selector
         haskell.haskell
         jnoortheen.nix-ide
-        ms-python.python
         naumovs.color-highlight
         naumovs.color-highlight
         tobiasalthoff.atom-material-theme
