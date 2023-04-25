@@ -1,5 +1,5 @@
 {
-  description = "sworne@ hm config";
+  description = "sworne@ dotfiles";
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-22.05";
     home-manager = {
