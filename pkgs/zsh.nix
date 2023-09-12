@@ -26,7 +26,7 @@
       };
       history.size = 100000;
       initExtra = "if [ -f ~/.zshwork ]; then . ~/.zshwork; fi";
-      enableSyntaxHighlighting = false;
+      syntaxHighlighting.enable = false;
       prezto = {
         enable = true;
         extraConfig = ''
