@@ -18,12 +18,12 @@
    ];
    xdg.configFile."sunshine/apps.json".text = builtins.toJSON {
     env = "/run/current-system/sw/bin";
-        apps = [
+      apps = [
             {
-                name = "Baldur's Gate 3";
-                output = "bg3.txt";
-                detached = ["${pkgs.util-linux}/bin/setsid ${pkgs.steam}/bin/steam steam://rungameid/1086940"];
-                image-path = "/var/tmp/bg3.png";
+            name = "Steam";
+            output = "steam.txt";
+            detached = ["${pkgs.util-linux}/bin/setsid ${pkgs.steam}/bin/steam steam://open/bigpicture"];
+            image-path = "steam.png";
             }
         ];
     };
