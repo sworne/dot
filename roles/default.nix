@@ -1,13 +1,6 @@
-{ pkgs, ... }: let themes = import ../config/themes.nix; in {
+{ pkgs, ... }: {
   imports = [
     ../pkgs/fzf.nix
     ../pkgs/zsh.nix
   ];
-
-  nixpkgs.config.allowUnfree = true;
-  home.stateVersion = "22.05";
-  _module.args = {
-    utils = import ../utils { inherit pkgs; };
-    theme = themes.theme.navy;
-  };
 }

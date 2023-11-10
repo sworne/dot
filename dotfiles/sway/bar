@@ -1,0 +1,16 @@
+bar {
+    position bottom
+    tray_output primary
+    tray_padding 20
+    font Inconsolata 11
+    status_command while ~/.config/sway/bar.sh; do sleep 5; done
+    status_edge_padding 20
+    status_padding 5
+    colors {
+        statusline $tertiary
+        background $primary
+        focused_workspace $primary $tertiary $primary
+        inactive_workspace $primary $primary $quaternary
+        active_workspace $primary $primary $tertiary
+    }
+}

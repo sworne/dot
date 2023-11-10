@@ -5,6 +5,6 @@
     ../pkgs/swaylock.nix
     ../pkgs/gtk.nix
     ../pkgs/redshift.nix
-    ../pkgs/alacritty.nix
+    ../pkgs/foot.nix
   ];
 }

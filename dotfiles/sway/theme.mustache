@@ -4,14 +4,6 @@ set $tertiary {{{white}}}
 set $quaternary {{{brightWhite}}}
 set $urgent {{{red}}}
 
-bar.colors {
-    statusline $tertiary
-    background $primary
-    focused_workspace $primary $tertiary $primary
-    inactive_workspace $primary $primary $quaternary
-    active_workspace $primary $primary $tertiary
-}
-
 client.focused          $tertiary $tertiary $primary $tertiary $tertiary
 client.focused_inactive $primary $primary $tertiary $primary $primary
 client.unfocused        $primary $primary $tertiary $primary $primary
@@ -23,6 +15,25 @@ default_border pixel 6
 default_floating_border pixel 6
 hide_edge_borders smart
 focus_follows_mouse yes
-gaps inner 10
-gaps outer 10
+gaps inner 4
+gaps outer 4
 smart_gaps off
+
+bar {
+    position bottom
+    tray_output primary
+    tray_padding 20
+    font Inconsolata 11
+    status_command while ~/.config/sway/bar.sh; do sleep 5; done
+    status_edge_padding 20
+    status_padding 5
+    colors {
+        statusline $tertiary
+        background $primary
+        focused_workspace $primary $tertiary $primary
+        inactive_workspace $primary $primary $quaternary
+        active_workspace $primary $primary $tertiary
+    }
+}
+
+output * bg ~/.config/bg {{{bg_mode}}}
